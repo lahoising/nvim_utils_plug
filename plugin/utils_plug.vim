@@ -7,6 +7,5 @@ set cpo&vim
 command! UtilsDebugProfile lua require("utils_plug.debugging").generateDebugProfile() 
 
 let &cpo = s:save_cpo 
-unlet s:save_cpolet 
-
-g:loaded_utils_plug = 1
+unlet s:save_cpo
+let g:loaded_utils_plug = 1
