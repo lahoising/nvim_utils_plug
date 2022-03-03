@@ -34,7 +34,7 @@ local vimspectorCpp = [[
 				"MIMode": "gdb"
 			}
 		}
-}
+	}
 }
 ]]
 
@@ -64,7 +64,7 @@ function deb.generateDebugProfile()
         local debugProfile = string.format(vimspectorPython, python3)
 		generate_file(debugProfile)
 
-	elseif ft == "cpp" then
+	elseif ft == "cpp" or ft == "rust" then
 		local debugProfile = string.format(vimspectorCpp)
 		generate_file(debugProfile)
     else
